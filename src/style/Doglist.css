@@ -1,0 +1,40 @@
+.Dog img{
+    width: 75%;
+    filter : grayscale();
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 100%;
+}
+.Dog:hover img{
+    filter:none;
+}
+.Dog .underline{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+.Dog .underline h3{
+    color:white;
+}
+.underline::after {    
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+ .Dog:hover .underline::after{
+    width: 100%; 
+    left: 0; 
+  }
+  @media screen and (max-height: 300px) {
+	ul {
+		margin-top: 40px;
+	}
+}
